@@ -12,7 +12,7 @@ The company was incorporated in 2013 by founders Zach Perret and William Hockey.
 
 **What is Plaid?**
 
-Plaid is a financial technology company based in San Francisco with offices in Amsterdam, Longon, Salt Lake City, and New York City. Today, plaid has over 400 employees and a $2.65 Billion valuation. The company develops technology platforms, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
+Plaid is a financial technology company based in San Francisco with offices in Amsterdam, London, Salt Lake City, and New York City. Today, Plaid has over 400 employees and a $2.65 Billion valuation. The company develops technology platforms, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
 Plaid is focused on democratizing financial services through technology. They build consumer experiences, developer-friendly infrastructure, and intelligent tools that give everyone the ability to create products that solve big problems.
 
 In a nutshell, Plaid enables applications to sync with their users' bank accounts to track and manage their budgets, and transfer funds. Plaid's API essentially serves as the connecter between banks and fintechs, and it's currently being used by several popular brands like Venmo, Gusto, TransferWise, Charity Water, Venmo, Gusto, TransferWise, Charity Water, Robinhood, and Level Money.
@@ -53,19 +53,6 @@ An end-to-end integration involves client-side and server-side configurations. B
 
 ![Plaid Interactions](Plaid_Interactions.jpg)
 
-
-
-## Sector After Plaid Disruption:
-
-Today Plaid's reach extends across tens of millions of end users and thousands of apps, which account for hundreds of billions in spending and financial planning. The comapnies revenue was $40 million last year, according to Forbes' estimate, and its cash-flow is close to break even. 
-
-## Risks in the Market:
-
-App makers who integrate with services like Amazon and Google expect their apps to work with a consistency impossible for a service like Plaid to even approach, says Warren Hogarth, who uses Plaid at his money manager startup, Empower. The problem, he says, is that Plaid remains at the mercy of the banks, which don't feel any urgency to share their customers' data with apps that aren't helping their bottom line. "It's a tricky place to be," he says.
-
-Should the banks ever band together to offer their own joint APIs, they could undercut much of Plaid's business. Competition is also heating up, from new startups and from holdovers such as Yodlee and Finicity, which also offer solutions for connecting to banks by API. One venture capitalist who has studied fintech warns that with many bank accounts concentrated with a few leading banks, it could be hard for Plaid to maintain pricing if customers focus more on cost. "None of these companies using Plaid are cost optimizing yet," he says. "What happens when they're not focused on adding tons of new customers?"
-
-
 ## Products:
 
 | Products: | Description: |
@@ -102,7 +89,7 @@ Asset Reports are intended to be created on a per-user basis. In the context of 
 Finally, Asset Reports are immutable, meaning they can only be created and removed, not updated.
 
 Investments:
-The investments/holdings endpoints allow developers to retrieve user-authorized Holding, Security, and InvestmentTransactions data for a wide array of investment account and security types. Both Investments endpoints are only compatible with Items having Accounts of type investment.
+The investments/holdings endpoints allow developers to retrieve user-authorized Holding, Security, and Investment Transactions data for a wide array of investment account and security types. Both Investments endpoints are only compatible with Items having Accounts of type investment.
 
 Liabilities:
 The liabilities endpoint returns various details about an Item with loan or credit accounts. The currently supported Account types are available here.
@@ -114,6 +101,15 @@ The types of information returned by Liabilities can include:
 * Current loan terms: interest rate, maturity, limits
 * Account details: original loan amount, guarantor, and more
 
+## Sector After Plaid Disruption:
+
+Today Plaid's reach extends across tens of millions of end users and thousands of apps, which account for hundreds of billions in spending and financial planning. The comapnies revenue was $40 million last year, according to Forbes' estimate, and its cash-flow is close to break even. 
+
+## Risks in the Market:
+
+App makers who integrate with services like Amazon and Google expect their apps to work with a consistency impossible for a service like Plaid to even approach, says Warren Hogarth, who uses Plaid at his money manager startup, Empower. The problem, he says, is that Plaid remains at the mercy of the banks, which don't feel any urgency to share their customers' data with apps that aren't helping their bottom line. "It's a tricky place to be," he says.
+
+Should the banks ever band together to offer their own joint APIs, they could undercut much of Plaid's business. Competition is also heating up, from new startups and from holdovers such as Yodlee and Finicity, which also offer solutions for connecting to banks by API. One venture capitalist who has studied fintech warns that with many bank accounts concentrated with a few leading banks, it could be hard for Plaid to maintain pricing if customers focus more on cost. "None of these companies using Plaid are cost optimizing yet," he says. "What happens when they're not focused on adding tons of new customers?"
 
 ## Glossary:
 
