@@ -101,6 +101,19 @@ The types of information returned by Liabilities can include:
 * Current loan terms: interest rate, maturity, limits
 * Account details: original loan amount, guarantor, and more
 
+## Competitive Landscape:
+
+| Description | Plaid | TrueLayer | Scivantage | InvestCloud |
+| ----------- | ----- | --------- | ---------- | ----------- |
+| Description | Developer of an application programming interface designed to offer financial and banking services. | Developer of API platforms intended for individuals to share or aggregate their financial information from different providers. | Developer of an enterprise platform intended to transform complex information and processes into intuitive user experiences | Developer of digital financial services platform designed to offer knowledge about investment options to the users. 
+| HQ Location | San Francisco, CA | London, United Kingdom | Jersey City, NJ | Los Angeles, CA
+| Employees | 400/2019 | 40/2019 | 167/2019 | 300/2019
+| Total Raised | $310M | $46.95M | $49.5M | $133.15M
+| Post Valuation | 2.65B - 12/03/2018 | $122.35M 06/04/2019 | N/A | $445M - 12/27/2017
+| Year Founded | 2013 | 2016 | 2000 | 2010
+
+
+
 ## Sector After Plaid Disruption:
 
 Today Plaid's reach extends across tens of millions of end users and thousands of apps, which account for hundreds of billions in spending and financial planning. The comapnies revenue was $40 million last year, according to Forbes' estimate, and its cash-flow is close to break even. 
