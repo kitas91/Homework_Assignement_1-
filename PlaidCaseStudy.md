@@ -58,12 +58,12 @@ An end-to-end integration involves client-side and server-side configurations. B
 | Products: | Description: |
 | -------- | ----------- |
 | Authentication | Retrieve account and routing numbers for ACH* authentication. | 
-| Transaction | Clear transaction data going back as far as 24 months. Transaction data may include contects such as geolocation, merchant, and category information. 
+| Transaction | Clear transaction data going back as far as 24 months. Transaction data may include contexts such as geolocation, merchant, and category information. 
 | Identity | Identity information on file with the bank. Reduce fraud by comparing user-submitted data to validate identity.
 | Balance | Check balances in real time to prevent non-sufficient funds fee.
 | Income | Varity employment and income information.
 | Assets | Streamline borrower experiences by verifying assets, including account balanes, transaction histories and account holder identity information. 
-|Investments | Access liabilities data for student loans and credit cards.
+|Investments | Gain insight into a user's investment accounts, including account balances, holdings, and transactions. 
 |Liabilities | Access liabilities data for student loans and credit cards.
 
 Authentication:
