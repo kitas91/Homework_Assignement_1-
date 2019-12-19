@@ -4,7 +4,7 @@
 
 **Name of company:**
 
-Plaid
+Plaid Inc.
 
 **When was the company incorporated?**
 
@@ -12,7 +12,7 @@ The company was incorporated in 2013 by founders Zach Perret and William Hockey.
 
 **What is Plaid?**
 
-Plaid is a financial technology company based in San Francisco. The company builds a technology platform, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
+Plaid is a financial technology company based in San Francisco with offices in Amsterdam, Longon, Salt Lake City, and New York City. Today, plaid has over 400 employees and a $2.65 Billion valuation. The company develops technology platforms, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
 Plaid is focused on democratizing financial services through technology. They build consumer experiences, developer-friendly infrastructure, and intelligent tools that give everyone the ability to create products that solve big problems.
 
 In a nutshell, Plaid enables applications to sync with their users' bank accounts to track and manage their budgets, and transfer funds. Plaid's API essentially serves as the connecter between banks and fintechs, and it's currently being used by several popular brands like Venmo, Gusto, TransferWise, Charity Water, Venmo, Gusto, TransferWise, Charity Water, Robinhood, and Level Money.
@@ -27,15 +27,11 @@ Plaid has raised a total of $310 million. The company raised $60 million in Seed
 
 ## Sector Before Plaid Disruption:
 
-With the fierce competition between financial institutions and the FinTech space, many institutions were reluctant to release customer information to FinTech innovation commpanies. 
+With the fierce competition between traditional financial institutions and the FinTech space, many institutions were reluctant to release customer information to innovative FinTech commpanies. 
 
 Initially, companies such as Venmo and Paypal used Yodlee to gain access to customer bank accounts. Yodlee uses micro-transactions to varify customers bank accounts. Others uploaded PDFs of paper statements and typed in the data manually. Perret and Hockey sought to create an application programming interface, or API, to perform the same function with only a bank customer's online user name and password.
 
 Today, Plaid has changed the way FinTech companies interact with financial institutions and share customer bank account information. 
-
-SETTING UP SHOP in New York in the spring of 2012, with Perret as CEO and Hockey as CTO, the pair scored a stroke of luck. Venmo's engineering chief was in the process of cutting the cost of a peer-to-peer money transfer for making payments. The solution was settling transactions in big batches; while Venmo customers would transact instantly, the actual payment was delayed a day. Plaid helped remove the risk: Venmo would know in real time that the sender had a sufficient bank balance.
-
-Venmo's validation helped the startup take off among other fintech customers that were looking to emulate Venmo's success. Some now-well-known apps would sign up months before they became household names.
 
 ## How Plaid Works:
 
@@ -59,13 +55,6 @@ An end-to-end integration involves client-side and server-side configurations. B
 
 
 
-
-
-
-
-
-
-
 ## Sector After Plaid Disruption:
 
 Today Plaid's reach extends across tens of millions of end users and thousands of apps, which account for hundreds of billions in spending and financial planning. The comapnies revenue was $40 million last year, according to Forbes' estimate, and its cash-flow is close to break even. 
@@ -75,11 +64,6 @@ Today Plaid's reach extends across tens of millions of end users and thousands o
 App makers who integrate with services like Amazon and Google expect their apps to work with a consistency impossible for a service like Plaid to even approach, says Warren Hogarth, who uses Plaid at his money manager startup, Empower. The problem, he says, is that Plaid remains at the mercy of the banks, which don't feel any urgency to share their customers' data with apps that aren't helping their bottom line. "It's a tricky place to be," he says.
 
 Should the banks ever band together to offer their own joint APIs, they could undercut much of Plaid's business. Competition is also heating up, from new startups and from holdovers such as Yodlee and Finicity, which also offer solutions for connecting to banks by API. One venture capitalist who has studied fintech warns that with many bank accounts concentrated with a few leading banks, it could be hard for Plaid to maintain pricing if customers focus more on cost. "None of these companies using Plaid are cost optimizing yet," he says. "What happens when they're not focused on adding tons of new customers?"
-
-Despite the popularity, this service appears to break two "fundamental" Internet security rules:
-
-* Never give credentials to a third party. The standard is to redirect the user to a login page on the website of the service providing the login. Plaid doesn’t do this, instead providing the login form on their own website. Even worse, Plaid allows services to embed the form in their websites (as an iframe). It’s not possible for casual internet users to tell the difference between this and an “unsecured” form on some random website, so this appears to be encouraging bad security practice. Worse still, Plaid provides a login page that looks very official, showing the bank logo and using the bank’s color scheme.
-* Never store passwords in plaintext. The only way for Plaid to access bank account details is with the password, and since my banking password was only required by Plaid once, they must be storing it in plaintext, or "encrypted" but convertible to plain text, so they can continue to use it to access my account.
 
 
 ## Products:
@@ -155,3 +139,5 @@ The types of information returned by Liabilities can include:
 3. "Institution-overview." *Plaid* plaid.com/docs/#institution-overview 
 4. Pruitt, Jeff. "6 Fintechs Distrupting The Industry." *Inc.com*, Inc., 26 Jan. 2017, www.inc.com/jeff-pruitt/6-fintechs-distrupting-the-industry.html
 5. "Plaid: Fintech's Happy Plumbers." *Forbes*, Forbes Magazine, www.forbes.com/plaid-fintech/#6145e4ad67f9.
+6. Data, Pitchbook: "Plaid:Pitchbook." *Pitchbook_plaid.Pdf,* 14 Nov. 2019.
+
