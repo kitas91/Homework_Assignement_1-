@@ -1,262 +1,153 @@
-# Homework_Assignement_1
+# Plaid Case Study
 
-Unit 1 Homework Assignment: FinTech Case Study
+## Plaid Overview:
 
-Background
-As a FinTech professional, it is critical to learn how FinTech companies start, evolve, and grow, and to be able to speak knowledgeably about the major players in the FinTech space. Even those in a highly technical role must stay abreast of what is happening in the business landscape, as many FinTech companies create tools and technologies that are then used by other companies.
-One of the key methods used to conduct corporate analysis is the case study. Case studies are often 50–100 pages or more, but your task is to create a more focused case study that analyzes how a FinTech company is responding to the problems and needs of the FinTech domain it is in, and how it is using technology to solve a standing financial problem.
-In this homework assignment, you will:
+**Name of company:**
 
+Plaid Inc.
 
-Select a Fintech domain that interests you, and then choose a company or project within that domain.
+**When was the company incorporated?**
 
+The company was incorporated in 2013 by founders Zach Perret and William Hockey.
 
-Research the domain and company.
+**What is Plaid?**
 
+Plaid is a financial technology company based in San Francisco with offices in Amsterdam, London, Salt Lake City, and New York City. Today, Plaid has over 400 employees and a $2.65 Billion valuation. The company develops technology platforms, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
+Plaid is focused on democratizing financial services through technology. They build consumer experiences, developer-friendly infrastructure, and intelligent tools that give everyone the ability to create products that solve big problems.
 
-Write a detailed case study of the company.
+In a nutshell, Plaid enables applications to sync with their users' bank accounts to track and manage their budgets, and transfer funds. Plaid's API essentially serves as the connecter between banks and fintechs, and it's currently being used by several popular brands like Venmo, Gusto, TransferWise, Charity Water, Venmo, Gusto, TransferWise, Charity Water, Robinhood, and Level Money.
 
+**How did the idea for the company come about?**
 
-Prepare and deliver a short presentation of your case study to the class. (You will give the presentation in class next week.)
+Plaid was originally intended to be  a personal financial management and tracking tool for consumers, previously operating under the name "Silver" and then "Rambler". When confronted with difficulties in connecting bank accounts required for these tools, Plaid pivoted its core business focus to a unified banking API. 
 
+**How is the company funded? How much funding have they received?**
 
-Upload your case study to your git repository.
+Plaid has raised a total of $310 million. The company raised $60 million in Seed, Series A and Series B funding from Spark Capital, Google Ventures, New Enterprise Asssociates, Goldman Sachs, American Express, and Citibank. On December 11, 2018 they announced a $250 million Series C round with a valuation of $2.65 billion. The funding was led by Mary Meeker, with Andreessen Horowitz and Index Ventures also joining as new investors. Former backers also participated. 
 
+## Sector Before Plaid Disruption:
 
-This assignment will challenge you to polish your FinTech research skills by accessing reports, publications, and online resources that FinTech professionals use to evaluate the industry. It will also help you situate the techniques and technologies you will be mastering in this course––e.g., machine learning, Python, modeling, blockchain––within the real world of global FinTech. Finally, it will give you practice presenting and speaking about FinTech strategy and technology.
+With the fierce competition between traditional financial institutions and the FinTech space, many institutions were reluctant to release customer information to innovative FinTech commpanies. 
 
+Initially, companies such as Venmo and Paypal used Yodlee to gain access to customer bank accounts. Yodlee uses micro-transactions to varify customers bank accounts. Others uploaded PDFs of paper statements and typed in the data manually. Perret and Hockey sought to create an application programming interface, or API, to perform the same function with only a bank customer's online user name and password.
 
-Instructions
+Today, Plaid has changed the way FinTech companies interact with financial institutions and share customer bank account information. 
 
-1. Choose a FinTech domain that you find relevant or interesting.
-Note: We covered a number of FinTech domains in class this week. If you already have a company in mind that you want to research, skip ahead to Step 3.
+## How Plaid Works:
 
+Most API* requests interact with an Item*, a set of credentials (map of key value pairs) associated with a financial institution. A single end-user of your application might have accounts at different financial institutions, which means they would have multiple different Items.
 
-Payments/Billing
+![Plaid](Plaid_Items.jpg)
 
+Your users create Items through Link, a drop-in module that handles the credential and MFA* validation process. Once an Item is created, Link passes a public_token* that you exchange for an access_token* from your backend app server.
 
-Capital Investment
+That access_token and item_id uniquely identify the Item. You use the access_token along with your client_id and secret to access products available for an Item and make changes to it over time.
 
+Once you create an Item, you can then access data—such as transaction data and account and routing numbers—using our API endpoints. You access data for an Item using the Item’s access_token, which is specific to your API keys and cannot be shared or used by any other API keys. By default, an access_token never expires, but you can rotate it.
 
-Investment Management
+Once the API keys have been produced, the client must integrate with Plaid Link which handles credential validation, and MFA. 
 
+Link allows your users to create Items and also update an Item if it goes into an error state, such as when they change their passwords or MFA information. 
 
-Wealth Management
+An end-to-end integration involves client-side and server-side configurations. Below is a brief overview of how they interact. 
 
+![Plaid Interactions](Plaid_Interactions.jpg)
 
-Enterprise Solutions
+## Products:
 
+| Products: | Description: |
+| -------- | ----------- |
+| Authentication | Retrieve account and routing numbers for ACH* authentication. | 
+| Transaction | Clear transaction data going back as far as 24 months. Transaction data may include contexts such as geolocation, merchant, and category information. 
+| Identity | Identity information on file with the bank. Reduce fraud by comparing user-submitted data to validate identity.
+| Balance | Check balances in real time to prevent non-sufficient funds fee.
+| Income | Varity employment and income information.
+| Assets | Streamline borrower experiences by verifying assets, including account balanes, transaction histories and account holder identity information. 
+|Investments | Gain insight into a user's investment accounts, including account balances, holdings, and transactions. 
+|Liabilities | Access liabilities data for student loans and credit cards.
 
-Insurance (InsurTech)
+Authentication:
+The authentication endpoint then allows you to retrieve the bank account and routing numbers associated with an Item's checking and savings accounts, along with high-level account data and balances when available.
 
+Transactions:
+The transactions endpoint allows developers to receive user-authorized transaction data for credit, depository, and some loan-type Accounts. Transaction data is standardized across financial institutions, and in many cases transactions are linked to a clean name, entity type, location, and category.
 
-Mortgage/Real Estate
+Identity:
+The identity endpoint allows you to retrieve various account holder information on file with the financial institution, including names, emails, phone numbers, and addresses.
 
+Balance: 
+The balance endpoint returns the real-time balance for each of an Item's accounts. It can be used for existing Items that were added via any of Plaid’s other products.
 
-Personal Finance/Deposits/Online Banking
+Income:
+The income endpoint allows you to retrieve information pertaining to a Item’s income. In addition to the annual income, detailed information will be provided for each contributing income stream (or job). Details on each of these fields can be found below.
 
+Assets:
+The asset_report endpoints allow you to retrieve point-in-time snapshots of an Item or set of Items, including account balances, historical transactions, and account holder identity information, which we call Asset Reports.
 
-Lending
+Asset Reports are intended to be created on a per-user basis. In the context of a loan application, for example, the lender would create an Asset Report for each borrower on a given loan.
 
+Finally, Asset Reports are immutable, meaning they can only be created and removed, not updated.
 
-Blockchain and Cryptocurrencies
+Investments:
+The investments/holdings endpoints allow developers to retrieve user-authorized Holding, Security, and Investment Transactions data for a wide array of investment account and security types. Both Investments endpoints are only compatible with Items having Accounts of type investment.
 
+Liabilities:
+The liabilities endpoint returns various details about an Item with loan or credit accounts. The currently supported Account types are available here.
 
-Regulation Technology (RegTech)
+The types of information returned by Liabilities can include:
 
+* Balances: how much is owed and over what pay period
+* Payment timing: last payment date and next payment due date
+* Current loan terms: interest rate, maturity, limits
+* Account details: original loan amount, guarantor, and more
 
-Open Banking
+## Competitive Landscape:
 
+| Description | Plaid | TrueLayer | Scivantage | InvestCloud |
+| ----------- | ----- | --------- | ---------- | ----------- |
+| Description | Developer of an application programming interface designed to offer financial and banking services. | Developer of API platforms intended for individuals to share or aggregate their financial information from different providers. | Developer of an enterprise platform intended to transform complex information and processes into intuitive user experiences. | Developer of digital financial services platform designed to offer knowledge about investment options to the users. 
+| HQ Location | San Francisco, CA | London, United Kingdom | Jersey City, NJ | Los Angeles, CA
+| Employees | 400/2019 | 40/2019 | 167/2019 | 300/2019
+| Total Raised | $310M | $46.95M | $49.5M | $133.15M
+| Post Valuation | 2.65B - 12/03/2018 | $122.35M - 06/04/2019 | N/A | $445M - 12/27/2017
+| Year Founded | 2013 | 2016 | 2000 | 2010
 
-Robo-advising
 
 
-Remember that because FinTech is an evolving field, different FinTech reports may use different names and definitions for various domains and sectors (e.g., CB Insights, Investopedia, Accenture). In addition, you may come across lists of FinTech domains online that are either longer or shorter than the list above; there is no one comprehensive list.
+## Sector After Plaid Disruption:
 
-2. Choose a company (or project) within  your chosen Fintech domain.
-Use online research to identify the trends in your domain, and choose a company that is successful or otherwise interesting to you. For example, if you chose Wealth Management, you may want to look at online journals, periodicals, reports, and websites about the future of Wealth Management, or how FinTech is changing or disrupting Wealth Management.
-Your company could be:
+Today Plaid's reach extends across tens of millions of end users and thousands of apps, which account for hundreds of billions in spending and financial planning. The comapnies revenue was $40 million last year, according to Forbes' estimate, and its cash-flow is close to break even. 
 
+## Risks in the Market:
 
-A new, emerging FinTech company that is doing well in a particular domain. Examples include Square, Plaid, Lemonade, RobinHood, and Coinbase.
+App makers who integrate with services like Amazon and Google expect their apps to work with a consistency impossible for a service like Plaid to even approach, says Warren Hogarth, who uses Plaid at his money manager startup, Empower. The problem, he says, is that Plaid remains at the mercy of the banks, which don't feel any urgency to share their customers' data with apps that aren't helping their bottom line. "It's a tricky place to be," he says.
 
+Should the banks ever band together to offer their own joint APIs, they could undercut much of Plaid's business. Competition is also heating up, from new startups and from holdovers such as Yodlee and Finicity, which also offer solutions for connecting to banks by API. One venture capitalist who has studied fintech warns that with many bank accounts concentrated with a few leading banks, it could be hard for Plaid to maintain pricing if customers focus more on cost. "None of these companies using Plaid are cost optimizing yet," he says. "What happens when they're not focused on adding tons of new customers?"
 
-A large incumbent financial or technology company that is doing something interesting and new with technology. Examples include Goldman Sachs’ Marcus, JP Morgan’s JPMCoin, Facebook Libra, and Apple Card.
+## Glossary:
 
+*Application Programming Interface (API) is an interface or communication protocal between different parts of a computer program intended to simplify the implementation and maintenance of software. It can take the shape of a web-based system, operating system, database system, computer hardware, or library.
 
-A smaller start-up that is not yet wildly successful, but that you find promising and interesting. This may include a FinTech company in your local area or a company with a new idea that you would like to learn more about.
+*Item: a set of credentials at a financial institution; each Item can have many accounts, and some accounts have transactions associated with them. 
 
+*Multi-factor authentication (MFA) is an authentication method in which a computer user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism.
 
 
-3. Conduct your research, using the case study template as a guide.
-We recommend that you use the case study template below in order to focus your research. You may lengthen, shorten, or––if necessary––remove sections from the template to accommodate the information available about your company.
-Note If you have chosen a project within a larger company (such as the Apple Credit Card), you may want to focus your research on the origins and scope of the project rather than on the company itself.
-Case Study Template
-# TITLE
+*Client ID: two private API keys; used to initialize Link and identify Items you create or update via Link.
 
-## Overview and Origin
+*Public Token: a short-lived token that can be exchanged for an access_token or used to initialize Link in update mode for an Item. 
 
-* Name of company
+*Access Token: A rotatable token unique to a single Item; used to access data for that Item. In computer systems, an access token contains the security credentialsfor a login session and identifies the user, the users groups, the useres privileges, and in some cases, a particular application.
 
-* When was the company incorporated?
+*Automated Clearing House (ACH): ACH or automated clearinghouse, is an electronic netowrk of financial transactions, generally domestic low value payments. ACHE is designed for high-volume, low-value payments, and charge fees low enough to encourage the transfer of low-value payments. 
 
-* Who are the founders of the company?
 
-* How did the idea for the company (or project) come about?
+## Works Cited:
+1. "Quickstart." *Plaid*, plaid.com/docs/quickstart/.
+2.  "Docs." *Plaid*, plaid.com/docs/.
+3. "Institution-overview." *Plaid* plaid.com/docs/#institution-overview 
+4. Pruitt, Jeff. "6 Fintechs Distrupting The Industry." *Inc.com*, Inc., 26 Jan. 2017, www.inc.com/jeff-pruitt/6-fintechs-distrupting-the-industry.html
+5. "Plaid: Fintech's Happy Plumbers." *Forbes*, Forbes Magazine, www.forbes.com/plaid-fintech/#6145e4ad67f9.
+6. Data, Pitchbook: "Plaid:Pitchbook." *Pitchbook_plaid.Pdf,* 14 Nov. 2019.
 
-* How is the company funded? How much funding have they received?
 
-
-## Business Activities:
-
-* What specific financial problem is the company or project trying to solve?
-
-* Who is the company's intended customer?  Is there any information about the market size of this set of customers?
-What solution does this company offer that their competitors do not or cannot offer? (What is the unfair advantage they utilize?)
-
-* Which technologies are they currently using, and how are they implementing them? (This may take a little bit of sleuthing–– you may want to search the company’s engineering blog or use sites like Stackshare to find this information.)
-
-
-## Landscape:
-
-* What domain of the financial industry is the company in?
-
-* What have been the major trends and innovations of this domain over the last 5-10 years?
-
-* What are the other major companies in this domain?
-
-
-## Results
-
-* What has been the business impact of this company so far?
-
-* What are some of the core metrics that companies in this domain use to measure success? How is your company performing, based on these metrics?
-
-* How is your company performing relative to competitors in the same domain?
-
-
-## Recommendations
-
-* If you were to advise the company, what products or services would you suggest they offer? (This could be something that a competitor offers, or use your imagination!) 
-
-* Why do you think that offering this product or service would benefit the company?
-
-* What technologies would this additional product or service utilize? 
-
-* Why are these technologies appropriate for your solution?
-
-4. Write the case study.
-Write the finished case study report in a markdown README.md file, using the above case study template. Your report should be approximately 5–8 pages long to ensure you provide all relevant information.
-Be sure to cite your sources in an addendum on the final page. List all websites, podcasts, blogs, or articles that you consulted in order to write the report, and provide links. Your list should be thorough and account for all sources you used, but it does not need to be a formal works cited page.
-
-5. Present your findings.
-Create a short slideshow that summarizes the information in your case study report and present it to the class. Plan on having 1 or 2 slides for each of the 5 sections of the template. Your presentation should be no more than 5 minutes.
-
-6. Upload your case study to your git repository.
-You learned some technical aspects of FinTech this week, including how to set up and populate a git repository. As a final step, take your finished case study and upload it to a repository to share with your instructor and class.
-
-
-Resources
-
-FinTech Companies and Domains
-For an overview of some of the most successful companies across FinTech domains, check out these resources:
-
-
-The 11 Biggest FinTech Companies in America 2019, Forbes
-
-
-World FinTech Report 2019, Capgemini
-
-
-The Most Innovative FinTech Companies in 2019, Forbes
-
-
-The Future of FinTech and Banking, Accenture
-
-
-Hottest FinTech Startups, Business Insider
-
-
-Top 10 FinTech Companies to Watch in 2019, TheStreet
-
-
-33 FinTech Companies and Startups to Keep in Your Back Pocket, Built In
-
-
-Scanning the FinTech Landscape: 10 Disruptive Models, McKinsey & Company
-
-
-
-Research Material
-As you research your company, you may find these types resources to be useful:
-
-
-The company’s website
-
-
-The company’s blog
-
-
-Company press releases (These can often be found on the Press page of the company's website, or via Google search.)
-
-
-Websites of competitors
-
-
-FinTech blogs and/or podcasts
-
-
-Interviews with the company’s founders, CTOs, or project leads
-
-
-Reports devoted to the particular FinTech domain you are focusing on (e.g.,  FinTech in the mortgage industry)
-
-
-Forbes
-
-
-McKinsey & Company
-
-
-Reuters
-
-
-TechCrunch
-
-
-Deloitte
-
-
-Built In
-
-
-FinTech Weekly
-
-
-KPMG
-
-
-Stackshare
-
-
-Crunchbase
-
-
-Angelist
-
-
-
-
-Submission
-
-
-Create a repository for this homework on GitHub.
-
-
-Upload the README file containing your case study report to this repository.
-
-
-Include your presentation slideshow or a link to an online slideshow such as Google Slides. Make sure that the slideshow can be viewed by anyone.
-
-
-Submit the link to your GitHub repository to Bootcamp Spot.
