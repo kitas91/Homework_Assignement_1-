@@ -15,7 +15,7 @@ The company was incorporated in 2013 by founders Zach Perret and William Hockey.
 Plaid is a financial technology company based in San Francisco with offices in Amsterdam, London, Salt Lake City, and New York City. Today, Plaid has over 400 employees and a $2.65 Billion valuation. The company develops technology platforms, which enables applications to connect with users' bank accounts. Plaid focuses on enabling consumers and businesses to interact with their bank accounts, check balances, and make payments through financial technology applications. 
 Plaid is focused on democratizing financial services through technology. They build consumer experiences, developer-friendly infrastructure, and intelligent tools that give everyone the ability to create products that solve big problems.
 
-In a nutshell, Plaid enables applications to sync with their users' bank accounts to track and manage their budgets, and transfer funds. Plaid's API essentially serves as the connecter between banks and fintechs, and it's currently being used by several popular brands like Venmo, Gusto, TransferWise, Charity Water, Venmo, Gusto, TransferWise, Charity Water, Robinhood, and Level Money.
+In a nutshell, Plaid enables applications to sync with their users' bank accounts to track and manage their budgets, and transfer funds. Plaid's API essentially serves as the connecter between banks and fintechs, and it's currently being used by several popular brands like Venmo, Gusto, TransferWise, Charity Water, Robinhood, and Level Money.
 
 **How did the idea for the company come about?**
 
